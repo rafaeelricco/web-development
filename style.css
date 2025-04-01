@@ -1,0 +1,256 @@
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Cor de fundo suave */
+  color: #333; /* Cor do texto principal */
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Habilita a rolagem suave ao clicar nos links internos */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos para o cabeçalho e a navegação */
+header {
+  background-color: #333; /* Cor de fundo escura para o cabeçalho */
+  color: #fff; /* Cor do texto clara */
+  padding: 1rem 0;
+  position: sticky; /* Mantém o cabeçalho fixo no topo */
+  top: 0;
+  z-index: 1000; /* Garante que o header fique sobre outros elementos */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none; /* Remove marcadores da lista */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 0 10px; /* Espaçamento entre os itens do menu */
+  padding: 5px 0;
+}
+
+header nav ul li a {
+  color: #fff; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ccc; /* Cor do link ao passar o mouse */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 20px auto; /* Centraliza o conteúdo e adiciona margem */
+  padding: 0 20px; /* Espaçamento interno nas laterais */
+}
+
+/* Estilos para as seções */
+section {
+  background-color: #fff; /* Fundo branco para as seções */
+  margin-bottom: 20px; /* Espaçamento abaixo de cada seção */
+  padding: 20px; /* Espaçamento interno das seções */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  /* Ajustado para evitar sobreposição com o cabeçalho fixo */
+  padding-top: 20px;
+  margin-top: 20px;
+  overflow-wrap: break-word;
+}
+
+section h2 {
+  color: #333;
+  border-bottom: 2px solid #333; /* Linha abaixo do título da seção */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Estilos específicos para a seção de Contato e Formulário */
+#contato form div {
+  margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+#contato label {
+  display: block; /* Coloca o label acima do input */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato textarea {
+  width: 100%; /* Faz os campos ocuparem a largura total */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+#contato textarea {
+  resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+#contato .btn-submit {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#contato .btn-submit:hover {
+  background-color: #555;
+}
+
+/* Estilos para o rodapé (opcional) */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    padding: 0.5rem 0;
+  }
+
+  header .nav-container {
+    position: relative;
+    padding: 16px 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  header nav ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  header nav ul li {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  main {
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .experience-item,
+  .project-item,
+  .certification-item {
+    padding: 10px;
+  }
+
+  .skills span {
+    margin: 2px;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 0.8rem 0;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  .skills span {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+}
