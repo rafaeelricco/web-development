@@ -1,26 +1,23 @@
-/* Estilos gerais para o corpo da página */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Cor de fundo suave */
-  color: #333; /* Cor do texto principal */
-  line-height: 1.6; /* Espaçamento entre linhas */
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Habilita a rolagem suave ao clicar nos links internos */
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilos para o cabeçalho e a navegação */
 header {
-  background-color: #333; /* Cor de fundo escura para o cabeçalho */
-  color: #fff; /* Cor do texto clara */
+  background-color: #333;
+  color: #fff;
   padding: 1rem 0;
-  position: sticky; /* Mantém o cabeçalho fixo no topo */
+  position: sticky;
   top: 0;
-  z-index: 1000; /* Garante que o header fique sobre outros elementos */
+  z-index: 1000;
   width: 100%;
   box-sizing: border-box;
 }
@@ -37,7 +34,7 @@ header nav {
 }
 
 header nav ul {
-  list-style: none; /* Remove marcadores da lista */
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -46,22 +43,23 @@ header nav ul {
 }
 
 header nav ul li {
-  margin: 0 10px; /* Espaçamento entre os itens do menu */
+  margin: 0 10px;
   padding: 5px 0;
 }
 
 header nav ul li a {
-  color: #fff; /* Cor dos links */
-  text-decoration: none; /* Remove sublinhado dos links */
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
   padding: 5px 10px;
   transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #ccc; /* Cor do link ao passar o mouse */
+  color: #ccc;
 }
 
+/* Controle do ícone de menu para dispositivos móveis */
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -77,21 +75,18 @@ header nav ul li a:hover {
   transition: 0.4s;
 }
 
-/* Estilos para o conteúdo principal */
 main {
-  max-width: 1200px; /* Largura máxima do conteúdo */
-  margin: 20px auto; /* Centraliza o conteúdo e adiciona margem */
-  padding: 0 20px; /* Espaçamento interno nas laterais */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-/* Estilos para as seções */
 section {
-  background-color: #fff; /* Fundo branco para as seções */
-  margin-bottom: 20px; /* Espaçamento abaixo de cada seção */
-  padding: 20px; /* Espaçamento interno das seções */
-  border-radius: 5px; /* Bordas arredondadas */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  /* Ajustado para evitar sobreposição com o cabeçalho fixo */
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
   margin-top: 20px;
   overflow-wrap: break-word;
@@ -99,18 +94,18 @@ section {
 
 section h2 {
   color: #333;
-  border-bottom: 2px solid #333; /* Linha abaixo do título da seção */
+  border-bottom: 2px solid #333;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
-/* Estilos específicos para a seção de Contato e Formulário */
+/* Estilos para o formulário de contato */
 #contato form div {
-  margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+  margin-bottom: 15px;
 }
 
 #contato label {
-  display: block; /* Coloca o label acima do input */
+  display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -118,15 +113,15 @@ section h2 {
 #contato input[type="text"],
 #contato input[type="email"],
 #contato textarea {
-  width: 100%; /* Faz os campos ocuparem a largura total */
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  box-sizing: border-box;
 }
 
 #contato textarea {
-  resize: vertical; /* Permite redimensionar apenas verticalmente */
+  resize: vertical;
 }
 
 #contato .btn-submit {
@@ -143,7 +138,6 @@ section h2 {
   background-color: #555;
 }
 
-/* Estilos para o rodapé (opcional) */
 footer {
   text-align: center;
   margin-top: 30px;
@@ -153,7 +147,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Media Queries para responsividade */
+/* Adaptações para telas médias (tablets e smartphones) */
 @media screen and (max-width: 768px) {
   body {
     padding: 0;
@@ -227,6 +221,7 @@ footer {
   }
 }
 
+/* Ajustes específicos para dispositivos muito pequenos */
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
